@@ -14,7 +14,13 @@ function App() {
 
           {/* Content */}
           <div className="content-layer">
-            <h1 className="title-script">Grace, Spirit and Beauty</h1>
+            <h1 className="title-script">
+              {"Grace, Spirit and Beauty".split("").map((char, index) => (
+                <span key={index} style={{ animationDelay: `${index * 0.05}s` }} className={char === " " ? "space" : ""}>
+                  {char}
+                </span>
+              ))}
+            </h1>
 
             <div className="section intro">
               <p>Please join us for an evening of dinner, drinks, and celebration for Carolyn’s birthday.</p>
