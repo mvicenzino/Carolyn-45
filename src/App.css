@@ -88,8 +88,8 @@ body {
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.25;
-  /* Kept your requested opacity */
+  opacity: 0.35;
+  /* Increased from 0.25 for better visibility */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,12 +98,16 @@ body {
 
 .horse-img {
   max-width: 80%;
-  /* Reduced slightly to not crowd edges */
   max-height: 80%;
   object-fit: contain;
-  filter: grayscale(100%) sepia(25%) contrast(0.9);
+  filter: grayscale(90%) sepia(20%) contrast(1.0);
+  /* Slightly clearer */
   mix-blend-mode: multiply;
 }
+
+/* ... existing code ... */
+
+
 
 /* Content & Typography */
 .content-layer {
@@ -322,13 +326,13 @@ body {
   }
 
   .horse-img {
-    opacity: 0.8;
-    /* Increased opacity for better visibility */
+    opacity: 1;
+    /* Use full parent opacity */
     max-width: none;
     width: 180%;
     height: auto;
-    filter: grayscale(60%) sepia(10%) contrast(1.2);
-    /* Less grayscale, more contrast */
+    filter: grayscale(70%) sepia(10%) contrast(1.1);
+    /* Clearer on mobile */
   }
 
   .section p {
