@@ -32,13 +32,13 @@ function App() {
             </div>
 
             <div className="section rsvp">
-              <p>RSVP to <a href="mailto:mvicenzino@gmail.com">mvicenzino@gmail.com</a> or text me at <a href="tel:917-968-9614">917-968-9614</a>.</p>
+              <p>RSVP to <a href="mailto:mvicenzino@gmail.com?subject=Carolyn's Birthday">mvicenzino@gmail.com</a> or text me at <a href="tel:917-968-9614">917-968-9614</a>.</p>
             </div>
           </div>
         </div>
 
         <div className="actions">
-          <a href="mailto:mvicenzino@gmail.com" className="rsvp-button">
+          <a href="mailto:mvicenzino@gmail.com?subject=Carolyn's Birthday" className="rsvp-button">
             RSVP via Email
           </a>
         </div>
