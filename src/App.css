@@ -1,0 +1,365 @@
+:root {
+  --color-cream: #f9f7f2;
+  --color-charcoal: #2c2c2c;
+  --color-gold: #c5a059;
+  --color-gold-light: #e6c885;
+  --font-script: 'Great Vibes', cursive;
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Lato', sans-serif;
+  /* Adding a clean sans for small details */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+}
+
+.invitation-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Paper Texture Overlay */
+.invitation-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Gold Border Frame */
+.frame-border {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid var(--color-gold);
+  z-index: 2;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame-border::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px solid var(--color-gold);
+  opacity: 0.5;
+}
+
+.invitation-container {
+  width: 100%;
+  max-width: 750px;
+  /* Slightly wider to allow text to breathe horizontally */
+  padding: 6rem 3rem;
+  /* More padding */
+  position: relative;
+  text-align: center;
+  z-index: 10;
+}
+
+/* Background Image */
+.bg-layer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.25;
+  /* Kept your requested opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 10s ease-in-out;
+}
+
+.horse-img {
+  max-width: 80%;
+  /* Reduced slightly to not crowd edges */
+  max-height: 80%;
+  object-fit: contain;
+  filter: grayscale(100%) sepia(25%) contrast(0.9);
+  mix-blend-mode: multiply;
+}
+
+/* Content & Typography */
+.content-layer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* Further reduced from 1rem */
+  align-items: center;
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+/* ... existing code ... */
+
+.details {
+  margin-top: 0.5rem;
+  /* Reduced from 1rem */
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  /* Reduced gap inside details */
+  position: relative;
+}
+
+/* ... existing code ... */
+
+.rsvp {
+  margin-top: 0;
+  /* Removed margin completely */
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: #666;
+  letter-spacing: 0.02em;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title-script {
+  font-family: var(--font-script);
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  /* Reduced size slightly */
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 0.25rem;
+  /* Reduced from 1rem */
+  background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* Gold Gradient Text */
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  padding-bottom: 0.2rem;
+  /* Prevent descenders clipping */
+}
+
+.section p {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.5;
+  /* Reduced from 1.8 */
+  letter-spacing: 0.03em;
+  color: var(--color-charcoal);
+  margin: 0;
+}
+
+.intro p {
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 0.25rem;
+  /* Reduced from 0.5rem */
+}
+
+.body-text p {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.details {
+  margin-top: 0.25rem;
+  /* Reduced from 0.5rem */
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  /* Reduced from 0.4rem */
+  position: relative;
+}
+
+/* Decorative divider */
+/* Decorative divider */
+.details::before,
+.details::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C12 2 14.5 8.5 21 12C14.5 15.5 12 22 12 22C12 22 9.5 15.5 3 12C9.5 8.5 12 2 12 2Z' fill='%23c5a059'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0.8rem auto;
+  opacity: 0.9;
+}
+
+.details .highlight {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #1a1a1a;
+}
+
+.details .highlight.time {
+  font-size: 1.15rem;
+  /* Smaller than the date */
+  margin-top: -0.2rem;
+  /* Pull it slightly closer to the date */
+}
+
+.details .venue {
+  font-size: 1.3rem;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+.details .address {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  /* Increased to match venue size */
+  color: #444;
+  /* Slightly darker for better readability with serif */
+  letter-spacing: 0.02em;
+  /* Reduced spacing for regular case */
+  margin-top: 0.2rem;
+}
+
+.rsvp {
+  margin-top: 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  /* Slightly larger for readability */
+  color: #666;
+  /* Softer color */
+  letter-spacing: 0.02em;
+  /* Normal spacing */
+}
+
+/* Elegant Button */
+.rsvp-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 16px 50px;
+  background: transparent;
+  color: var(--color-charcoal);
+  text-decoration: none;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-gold);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.rsvp-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-gold);
+  transition: width 0.4s ease;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.rsvp-button:hover {
+  border-color: #b38728;
+  color: #000;
+  letter-spacing: 0.25em;
+}
+
+.rsvp-button:hover::before {
+  width: 100%;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .frame-border {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .title-script {
+    font-size: 3.2rem;
+    /* Slightly smaller to prevent wrapping issues */
+    margin-bottom: 0.5rem;
+  }
+
+  .invitation-container {
+    padding: 3rem 1.2rem;
+    /* Reduce padding to give more width to text */
+  }
+
+  .horse-img {
+    opacity: 0.8;
+    /* Increased opacity for better visibility */
+    max-width: none;
+    width: 180%;
+    height: auto;
+    filter: grayscale(60%) sepia(10%) contrast(1.2);
+    /* Less grayscale, more contrast */
+  }
+
+  .section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    /* More readable line height for small text */
+  }
+
+  .intro p {
+    font-size: 1.1rem;
+  }
+
+  .details .highlight {
+    font-size: 1.1rem;
+    /* Much smaller than desktop to fit on lines */
+    letter-spacing: 0.1em;
+  }
+
+  .details .highlight.time {
+    font-size: 0.95rem;
+  }
+
+  .details .venue {
+    font-size: 1.1rem;
+  }
+
+  .rsvp-button {
+    padding: 14px 30px;
+    font-size: 0.85rem;
+    width: 100%;
+    /* Full width button on mobile looks better */
+    box-sizing: border-box;
+  }
+}

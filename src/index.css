@@ -1,0 +1,26 @@
+:root {
+  --color-cream: #fdfbf7;
+  --color-gold: #c5a059;
+  --color-text: #2c2c2c;
+  /* Softer black */
+  --page-bg: #fdfbf7;
+  --font-script: 'Great Vibes', cursive;
+  --font-serif: 'Playfair Display', serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--page-bg);
+  font-family: var(--font-serif);
+  color: var(--color-text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
