@@ -61,9 +61,6 @@ function App() {
           <a href="https://forms.gle/Ed66xhP3X5GrELhe6" target="_blank" rel="noopener noreferrer" className="rsvp-button primary">
             RSVP Now
           </a>
-          <a href="mailto:mvicenzino@gmail.com?subject=Carolyn's Birthday RSVP&body=Hey!%0A%0AWe'd love to see you for Carolyn's birthday celebration!%0A%0A📅 Friday, January 9th, 2026%0A🕡 6:30pm - 10:30pm%0A📍 The Grain House at the Old Mill Inn%0A    225 US-202, Basking Ridge, NJ 07920%0A%0APlease let me know if you can attend:%0A%0A◉ Yes, I'll be there!%0A○ No, I can't make it%0A○ Maybe, I'll let you know%0A%0A(Move the ◉ to your answer)%0A%0AName: %0ANumber of guests: %0A%0ALooking forward to celebrating with you!" className="rsvp-button secondary">
-            or Email Me
-          </a>
         </div>
       </div>
     </div>
