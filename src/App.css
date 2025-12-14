@@ -254,6 +254,7 @@ body {
 .body-text p {
   max-width: 550px;
   margin: 0 auto;
+  font-style: italic;
 }
 
 .details {
