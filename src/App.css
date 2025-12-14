@@ -425,8 +425,8 @@ body {
   }
 
   .invitation-container {
-    padding: 0.75rem 1.2rem 1.5rem;
-    /* Minimal top padding to fit content within card */
+    padding: 0.25rem 1rem 1rem;
+    /* Minimal padding to fit content tight to border */
   }
 
   .horse-img {
