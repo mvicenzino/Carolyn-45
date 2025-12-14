@@ -344,6 +344,40 @@ body {
   width: 100%;
 }
 
+/* Button Variants */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.rsvp-button.primary {
+  background: linear-gradient(135deg, #c5a059, #e6c885);
+  border-color: #b38728;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.rsvp-button.primary:hover {
+  background: linear-gradient(135deg, #b38728, #c5a059);
+  letter-spacing: 0.25em;
+}
+
+.rsvp-button.secondary {
+  background: transparent;
+  border: none;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  color: #666;
+  letter-spacing: 0.1em;
+}
+
+.rsvp-button.secondary:hover {
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+}
+
 /* Mobile Adjustments */
 @media (max-width: 600px) {
   .frame-border {
