@@ -19,7 +19,7 @@ function App() {
 
           {/* Background Image */}
           <div className="bg-layer">
-            <div className="horse-sprite"></div>
+            <img src="/bg-horse-subtle.png" alt="" className="horse-img" />
           </div>
 
           {/* Content */}
