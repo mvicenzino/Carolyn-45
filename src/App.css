@@ -261,6 +261,8 @@ body {
   max-width: 550px;
   margin: 0 auto;
   font-style: italic;
+  font-size: 1.25rem;
+  color: #555;
 }
 
 .details {
