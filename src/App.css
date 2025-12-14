@@ -26,19 +26,7 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
-}
-
-/* Paper Texture Overlay */
-.invitation-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 1;
+  background-color: var(--color-cream);
 }
 
 /* Gold Border Frame */
@@ -49,7 +37,6 @@ body {
   right: 20px;
   bottom: 20px;
   border: 1px solid var(--color-gold);
-  background-color: var(--color-cream);
   z-index: 2;
   pointer-events: none;
   display: flex;
@@ -104,26 +91,40 @@ body {
   filter: grayscale(90%) sepia(20%) contrast(1.0);
   /* Slightly clearer */
   mix-blend-mode: multiply;
-  animation: trot 3s ease-in-out infinite;
+  animation: trot 4s ease-in-out infinite;
 }
 
 @keyframes trot {
-
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
   }
 
-  25% {
-    transform: translateY(-8px) rotate(0.5deg);
+  15% {
+    transform: translateX(2px) translateY(-3px) rotate(0.3deg);
   }
 
-  50% {
-    transform: translateY(0) rotate(0deg);
+  30% {
+    transform: translateX(3px) translateY(0) rotate(0deg);
+  }
+
+  45% {
+    transform: translateX(2px) translateY(-2px) rotate(-0.3deg);
+  }
+
+  60% {
+    transform: translateX(0) translateY(0) rotate(0deg);
   }
 
   75% {
-    transform: translateY(-6px) rotate(-0.5deg);
+    transform: translateX(-2px) translateY(-3px) rotate(0.3deg);
+  }
+
+  90% {
+    transform: translateX(-1px) translateY(-1px) rotate(-0.2deg);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
   }
 }
 
@@ -408,7 +409,6 @@ body {
     left: 10px;
     right: 10px;
     bottom: 10px;
-    background-color: var(--color-cream);
   }
 
   .title-script {
