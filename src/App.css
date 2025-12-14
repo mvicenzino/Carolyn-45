@@ -9,13 +9,18 @@
   /* Adding a clean sans for small details */
 }
 
+html {
+  background-color: #f9f7f2;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--color-cream);
+  background-color: #f9f7f2;
   color: var(--color-charcoal);
   font-family: var(--font-serif);
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
 }
 
 .invitation-wrapper {
@@ -26,7 +31,7 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
-  background-color: var(--color-cream);
+  background-color: #f9f7f2;
 }
 
 /* Gold Border Frame */
