@@ -103,6 +103,27 @@ body {
   filter: grayscale(90%) sepia(20%) contrast(1.0);
   /* Slightly clearer */
   mix-blend-mode: multiply;
+  animation: trot 3s ease-in-out infinite;
+}
+
+@keyframes trot {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  75% {
+    transform: translateY(-6px) rotate(-0.5deg);
+  }
 }
 
 /* ... existing code ... */
