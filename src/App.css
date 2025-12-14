@@ -449,6 +449,10 @@ body {
     font-size: 1.1rem;
   }
 
+  .body-text p {
+    font-size: 1.1rem;
+  }
+
   .details .highlight {
     font-size: 1.1rem;
     /* Much smaller than desktop to fit on lines */
