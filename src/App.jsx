@@ -1,6 +1,16 @@
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
+  const [animationDone, setAnimationDone] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimationDone(true)
+    }, 2200) // Wait for animation to finish
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div className="invitation-wrapper">
       <div className="frame-border"></div>
@@ -15,11 +25,15 @@ function App() {
           {/* Content */}
           <div className="content-layer">
             <h1 className="title-script">
-              {"Grace, Spirit and Beauty".split("").map((char, index) => (
-                <span key={index} style={{ animationDelay: `${index * 0.05}s` }} className={char === " " ? "space" : ""}>
-                  {char}
-                </span>
-              ))}
+              {animationDone ? (
+                "Grace, Spirit and Beauty"
+              ) : (
+                "Grace, Spirit and Beauty".split("").map((char, index) => (
+                  <span key={index} style={{ animationDelay: `${index * 0.05}s` }} className={char === " " ? "space" : ""}>
+                    {char}
+                  </span>
+                ))
+              )}
             </h1>
 
             <div className="section intro">
