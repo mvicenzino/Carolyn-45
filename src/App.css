@@ -425,8 +425,8 @@ body {
   }
 
   .invitation-container {
-    padding: 3rem 1.2rem;
-    /* Reduce padding to give more width to text */
+    padding: 1.5rem 1.2rem 2rem;
+    /* Reduced top padding to fit content without scrolling */
   }
 
   .horse-img {
